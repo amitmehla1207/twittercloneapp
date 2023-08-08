@@ -1,0 +1,51 @@
+.dropdown{
+    position: absolute;
+    box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px;
+    max-width: calc(384px);
+    border-radius: 12px;
+    background-color: rgba(255,255,255,1);
+    min-width: 348px;
+    animation: dropdown 0.5s ease-in;
+    overflow: hidden;
+    transition: 0.2s height ease-in;
+}
+
+@keyframes dropdown {
+    0%{
+        max-height: 0%;
+    }
+    100%{
+        max-height: 999px;
+    }
+}
+
+
+
+.menu-item{
+    padding: 12px 16px 12px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.menu-item:hover{
+    background-color: rgba(0,0,0,0.03);
+}
+.menu-svg{
+    height: 1.25rem;
+}
+
+.menu-icon{
+    padding-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-label{
+    font-weight: 700;
+    font-size: 15px;
+    color: rgba(15,20,25,1.00);
+    line-height: 20px;
+}

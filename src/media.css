@@ -1,0 +1,123 @@
+@media only screen and (max-width: 1366px) {
+   
+
+  .logo h1{
+      font-size: 15px!important;
+      
+  }
+
+ 
+
+  .logo span{
+      font-size: 11px;
+  }
+.mainlinks{
+  justify-content: center;
+}
+
+.mainlinks a{
+  display: flex;
+  justify-content: center;
+}
+
+.mainlinks a .label{
+  display: none;
+}
+
+.posticon{
+  display: block!important;
+}
+
+.button-label{
+  display: none!important;
+}
+
+.post-btn{
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  flex-basis: 52px;
+  padding:0!important;
+}
+
+.user-details,
+.usermenuicon,
+.menu-icon
+{
+  display: none;
+}
+
+.user-control{
+  height: 48px!important;
+  width: 48px!important;
+  overflow: hidden;
+  justify-content: center!important;
+}
+
+.user-meta{
+  display: block!important;
+}
+
+.user-avatar-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#left{
+ width:90px;
+}
+
+
+
+}
+
+
+@media screen and (width <= 1200px) and (width >= 900px) {
+  #center{
+      width: 900px;
+  }
+
+  
+ 
+  #right{
+      width: 280px;
+      
+  }
+}
+
+@media screen and (width <= 900px) and (width >= 720px) {
+
+  #center{
+      width: 600px;
+      
+  }
+  .content{
+      width:600px;
+  }
+
+  #right{
+     display: none;
+  }
+}
+
+@media screen and (width <= 720px) {
+
+  #right{
+      display: none;
+   }
+
+  .titlebar{
+      width: 100%;
+      position: fixed!important;
+  }
+  #center{
+      width: auto!important;
+
+  }
+
+  .content{
+      border:0;
+  }
+}
