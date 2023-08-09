@@ -18,7 +18,8 @@ li,ul{
 .footer a,
 .footer span,
 .twc-account-name,
-.menu-label
+.menu-label,
+.tweetInput
 {
   font-family: "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
@@ -548,7 +549,9 @@ height: inherit;
 .twc-action.share:hover .twc-action-button{
   background: rgba(29,155,240,0.1);
 }
-.twc-action.share:hover .actionsvg,.twc-action.share:hover .twc-count{
+.twc-action.share:hover .actionsvg,
+.twc-action.share:hover .twc-count,
+.tweet_option_svg{
   color: rgba(29,155,240,1);
 }
 
@@ -754,18 +757,25 @@ margin-right:12px;
 
 .btn-main{
   background-color: rgb(29,155,240);
-  
+  font-weight: 700;
 }
 
 .btn-main:hover{
   background-color: rgb(26,140,216);
 }
 
+.btn-main:disabled{
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .black{
   background-color: rgba(15,20,25,1);
   font-weight: 700;
 }
-
+.black:hover{
+  background-color: rgba(15,20,25,0.8);
+}
 .post-btn{
   font-size: 17px;
   max-width: 100%;
@@ -795,17 +805,50 @@ margin-right:12px;
 
 
 
+.tweet_box_footer{
+  margin:2px 12px 2px 12px;
+  border-top: 1px solid var(--twc-gray);
+  height: 53px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 
+.tweetInput{
+  outline: none;
+  color:#222;
+  width:100%;
+  box-sizing: border-box;
+  padding:10px;
+  font-size: 21px;
+  border:0;
+  word-wrap: break-word;
+  resize: none;
+}
+
+.tweetInput::placeholder{
+  color:#777;
+}
 
 
 
+.tweet_option_svg{
+  fill:currentColor;
+}
 
 
+.tweet_options{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-
-
+.tweet_options button{
+  margin-right: 2px;
+}
 
 
 

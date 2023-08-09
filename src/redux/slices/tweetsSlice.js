@@ -1,5 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const initialState = {
   tweets: [],
@@ -8,19 +10,10 @@ const initialState = {
   test: 1,
 };
 
-const DATA_API = "https://www.jsonkeeper.com/b/O96W";
 
-const config = {
-  headers: {
-    "Access-Control-Allow-Origin": "*"
-  },
-};
-
-export const fetchTweets = createAsyncThunk("data/tweets.json", async () => {
-  const res = await axios
-    .get(DATA_API, config)
+export const fetchTweets = createAsyncThunk("/data/tweets.json", async () => {
+  const res = await axios.get('http://localhost:3000/data/tweets.json')
     .catch((error) => console.log(error));
-  //console.log(res);
   return res;
 });
 
@@ -43,6 +36,8 @@ const tweetsSlice = createSlice({
       });
   },
 });
+
+
 
 export const loadTweets = (state) => state.tweets.tweets;
 export const loadTest = (state) => state.tweets.test;

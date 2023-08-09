@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const DropDownMenu = (props) => {
-  const {top,left} = props;
+const DropDownMenu = (props) => {
+  const {top,left,animation,arrow} = props;
   return (
     <>
     <div className="dropdown" style={{top:top,left:left,translate:"transform(-40%,0)"}}>
@@ -64,3 +64,5 @@ export const DropDownMenu = (props) => {
     </>
   )
 }
+
+export default DropDownMenu;

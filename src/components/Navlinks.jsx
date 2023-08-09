@@ -147,7 +147,7 @@ export const Navlinks = () => {
                                             </g>
                                         </svg>
                                     </div>
-                                    <div className="label">More {testCount}</div>
+                                    <div className="label">More</div>
                                 </div>
                             </a>
 

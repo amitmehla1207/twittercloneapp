@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Navlinks } from './Navlinks'
 import { useDispatch } from 'react-redux';
-import { testClick } from '../redux/slices/tweetsSlice';
+import { togglePostModal } from '../redux/slices/globalSlice';
+import DropDownMenu from '../utils/DropDownMenu'
 
 const Header = () => {
 
     const dispatch = useDispatch();
+
+    const [Ucms,setUcms] = useState(false);
+
+    const userControlModal = () =>{
+                setUcms(!Ucms);
+    }
 
   return (
     <div id="left">
@@ -18,7 +25,7 @@ const Header = () => {
             <Navlinks/>
 
             <div className="post-btn-wrapper">
-                            <button className="btn btn-main post-btn"  onClick={()=> dispatch(testClick())}>
+                            <button className="btn btn-main post-btn"  onClick={()=> dispatch(togglePostModal())}>
                                 <div className="button-icon">
 
                                     <svg viewBox="0 0 24 24" aria-hidden="true"
@@ -38,8 +45,9 @@ const Header = () => {
 
 
                     <div className="leftbottom">
+                        {Ucms && <DropDownMenu arrow="bottom" animation="fadein"/>}
                         <div className="user-conrol-wrapper">
-                            <div className="user-control">
+                            <div className="user-control" onClick={userControlModal}>
                                 <div className="user-meta">
                                     <div className="user-avatar-wrapper">
                                         <div className="user-avatar">
