@@ -1,24 +1,10 @@
 [
+    
     {
         "id": "1",
         "tweet": "These are short, famous texts in English from classic sources like the Bible or Shakespeare. Some texts have word definitions and explanations to help you. Some of these texts are written in an old style of English. Try to understand them, because the English that we speak today is based on what our great, great, great, great grandparents spoke before! Of course, not all these texts were originally written in English. The Bible, for example, is a translation. But they are all well known in English today, and many of them express beautiful thoughts.",
         "timestamp": "2020-08-08T02:20:33+0000",
-        "img_url": "",
-        "stats": [
-            {
-                "retweets": "23",
-                "shares": "78",
-                "likes": "45",
-                "views": "78"
-            }
-        ],
-        "userid": "1"
-    },
-    {
-        "id": "1",
-        "tweet": "These are short, famous texts in English from classic sources like the Bible or Shakespeare. Some texts have word definitions and explanations to help you. Some of these texts are written in an old style of English. Try to understand them, because the English that we speak today is based on what our great, great, great, great grandparents spoke before! Of course, not all these texts were originally written in English. The Bible, for example, is a translation. But they are all well known in English today, and many of them express beautiful thoughts.",
-        "timestamp": "2020-08-08T02:20:33+0000",
-        "img_url": "",
+        "img_url": "pexels-efren-ftz-16177320.jpg",
         "stats": [
             {
                 "retweets": "23",
@@ -33,7 +19,7 @@
         "id": "2",
         "tweet": "It was 7 minutes after midnight. The dog was lying on the grass in the middle of the lawn in front of Mrs Shears’ house. Its eyes were closed. It looked as if it was running on its side, the way dogs run when they think they are chasing a cat in a dream. But the dog was not running or asleep. The dog was dead. There was a garden fork sticking out of the dog. The points of the fork must have gone all the way through the dog and into the ground because the fork had not fallen over. I decided that the dog was probably killed with the fork because I could not see any other wounds in the dog and I do not think you would stick a garden fork into a dog after it had died for some other reason, like cancer for example, or a road accident. But I could not be certain about this.",
         "timestamp": "2022-08-08T02:20:33+0000",
-        "img_url": "",
+        "img_url": "pexels-saraí-carrasco-17060538.jpg",
         "stats": [
             {
                 "retweets": "213",
@@ -48,7 +34,7 @@
         "id": "3",
         "tweet": "I got Siobhan to draw lots of these faces and then write down next to them exactly what they meant. I kept the piece the piece of paper in my pocket and took it out when I didn’t understand what someone was saying. But it was very difficult to decide which of the diagrams was most like the face they were making because people’s faces move very quickly.",
         "timestamp": "2022-08-08T02:20:33+0000",
-        "img_url": "",
+        "img_url": "pexels-quang-lự-đỗ-17518683.jpg",
         "stats": [
             {
                 "retweets": "3",
@@ -63,7 +49,7 @@
         "id": "4",
         "tweet": "I embarked on an experiment, having Siobhan draw a variety of facial expressions and jot down their corresponding meanings. I carried the paper in my pocket, pulling it out whenever someone's words perplexed me. Deciphering which diagram matched their swiftly shifting expressions proved challenging.",
         "timestamp": "2022-09-12T10:45:22+0000",
-        "img_url": "",
+        "img_url": "pexels-macx-converge-17889551.jpg",
         "stats": [
             {
                 "retweets": 290,
@@ -78,7 +64,7 @@
         "id": "5",
         "tweet": "With Siobhan's help, I explored the world of facial expressions by having her create a variety of emotive faces and labeling their meanings. The piece of paper she wrote on was my secret weapon, pulled out whenever conversations baffled me due to the rapid changes in people's expressions.",
         "timestamp": "2022-10-22T18:12:05+0000",
-        "img_url": "",
+        "img_url": "pexels-manasa-17662747.jpg",
         "stats": [
             {
                 "retweets": 126,
@@ -93,7 +79,7 @@
         "id": "6",
         "tweet": "I decided to delve into the world of nonverbal communication, collaborating with Siobhan to create a series of facial expressions accompanied by written explanations. The notes she made became my reference guide for deciphering confusing interactions where expressions changed rapidly.",
         "timestamp": "2022-11-30T05:56:18+0000",
-        "img_url": "",
+        "img_url": "pexels-tom-mccarten-17855911.jpg",
         "stats": [
             {
                 "retweets": 72,
@@ -108,7 +94,7 @@
         "id": "7",
         "tweet": "Siobhan and I embarked on an intriguing project, capturing a range of facial expressions alongside their corresponding descriptions. The crumpled paper I carried provided a lifeline during perplexing conversations, offering insight into the swift and intricate shifts in people's facial gestures.",
         "timestamp": "2023-01-15T20:30:57+0000",
-        "img_url": "",
+        "img_url": "pexels-saraí-carrasco-17060538.jpg",
         "stats": [
             {
                 "retweets": 392,
@@ -123,7 +109,7 @@
         "id": "8",
         "tweet": "In collaboration with Siobhan, I embarked on an experiment to decipher the nuances of facial expressions. We meticulously documented various expressions, each accompanied by detailed explanations. The pocket-sized guide proved invaluable in decoding rapidly changing facial cues during conversations.",
         "timestamp": "2023-03-02T12:18:41+0000",
-        "img_url": "",
+        "img_url": "pexels-fabrizio-miyashiro-17046701.jpg",
         "stats": [
             {
                 "retweets": 348,
@@ -138,7 +124,7 @@
         "id": "9",
         "tweet": "I embarked on an intriguing journey with Siobhan, exploring the world of facial expressions through sketches and corresponding explanations. The pocket-sized notes became my secret weapon, helping me navigate complex conversations where expressions morphed rapidly, often leaving me puzzled.",
         "timestamp": "2023-04-22T08:05:33+0000",
-        "img_url": "",
+        "img_url": "pexels-petr-ganaj-17818751.jpg",
         "stats": [
             {
                 "retweets": 264,
@@ -153,7 +139,7 @@
         "id": "10",
         "tweet": "Siobhan and I ventured into the realm of facial expressions, meticulously crafting a series of expressive faces with accompanying descriptions. Armed with these notes, I navigated conversations with newfound understanding, even as expressions shifted rapidly, conveying intricate emotions.",
         "timestamp": "2023-06-05T15:40:14+0000",
-        "img_url": "",
+        "img_url": "pexels-pollianna-bonnett-17419894.jpg",
         "stats": [
             {
                 "retweets": 454,

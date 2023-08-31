@@ -1,19 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { DropDownMenu } from '../utils/DropDownMenu'
+import { useSelector } from 'react-redux';
 
-const ArticleFormat = () => {
+const ArticleFormat = ({payload}) => {
 
+    const {id,tweet,stats,img_url} = payload;
     const [DropDown,setDropDown] = useState({});
     const [MenuX,setMenuX] = useState(0)
     const [MenuY,setMenuY] = useState(0)
 
     const showDropDown = (e,dropdownID) =>{
-       setMenuX(e.clientX - 250);
-       setMenuY(e.clientY - 30);
-       setDropDown((prev)=>({
+       setMenuX(e.clientX - 330);
+       setMenuY(e.clientY - 0);
+       setDropDown(prev=>({
         ...prev,
         [dropdownID]: !prev[dropdownID]
        }));
+       console.log(dropdownID)
     };
 
     const dropdownRef = useRef();
@@ -40,11 +43,11 @@ const ArticleFormat = () => {
 
   return (
     <>
-    {DropDown[1] && ( <div ref={dropdownRef}><DropDownMenu left={MenuX} top={MenuY}/></div>)}
+    
     <article id="twc">
                             <div className="twc-avatar">
-                                <div className="avatar">
-
+                                <div className="user-avatar">
+                                <img src={`../../img/${useSelector(state=>state.globalslice.avatar)}`} alt="avatar" className="avatarImg"></img>
                                 </div>
                             </div>
                             <div className="twc-body">
@@ -64,7 +67,8 @@ const ArticleFormat = () => {
                                         </span>
                                     </div>
                                     <div className="twc-meta-right">
-                                        <button className="twc-article-options" onClick={e=>showDropDown(e,1)}>
+                                    {DropDown[id] && ( <div ref={dropdownRef} style={{position:"relative"}}><DropDownMenu left="-900%" top={0} animation="slide" data={payload}/></div>)}
+                                        <button className="twc-article-options" onClick={e=>showDropDown(e,id)}>
                                             <svg viewBox="0 0 24 24" aria-hidden="true" className="optionssvg">
                                                 <g>
                                                     <path
@@ -77,18 +81,10 @@ const ArticleFormat = () => {
                                 </div>
                                 <div className="twc-content">
                                     <div className="twc-text">
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                            readable content of a page when looking at its layout. The point of using
-                                            Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-                                            opposed to using 'Content here, content here', making it look like readable
-                                            English. Many desktop publishing packages and web page editors now use Lorem
-                                            Ipsum as their default model text, and a search for 'lorem ipsum' will
-                                            uncover many web sites still in their infancy. Various versions have evolved
-                                            over the years, sometimes by accident, sometimes on purpose (injected humour
-                                            and the like</p>
+                                        <p>{tweet}</p>
                                     </div>
                                     <div className="twc-img">
-                                        <img src="/cottage-g901d2da4e_1920.jpg" />
+                                        <img src={`../../img/${img_url}`} />
                                     </div>
 
                                 </div>
@@ -104,7 +100,7 @@ const ArticleFormat = () => {
                                                 </g>
                                             </svg>
                                         </button>
-                                        <span className="twc-count">67</span>
+                                        <span className="twc-count"></span>
                                     </div>
 
                                     <div className="twc-action repost">
@@ -117,7 +113,7 @@ const ArticleFormat = () => {
                                                 </g>
                                             </svg>
                                         </button>
-                                        <span className="twc-count">67</span>
+                                        <span className="twc-count">{stats[0].retweets}</span>
                                     </div>
 
                                     <div className="twc-action like">
@@ -129,7 +125,7 @@ const ArticleFormat = () => {
                                                     </path>
                                                 </g>
                                             </svg> </button>
-                                        <span className="twc-count">67</span>
+                                        <span className="twc-count">{stats[0].likes}</span>
                                     </div>
 
 
@@ -143,7 +139,7 @@ const ArticleFormat = () => {
                                                 </g>
                                             </svg>
                                         </button>
-                                        <span className="twc-count">67</span>
+                                        <span className="twc-count">{stats[0].views}</span>
                                     </div>
 
                                     <div className="twc-action share">
@@ -156,7 +152,7 @@ const ArticleFormat = () => {
                                                 </g>
                                             </svg>
                                         </button>
-                                        <span className="twc-count">67</span>
+                                        <span className="twc-count">{stats[0].shares}</span>
                                     </div>
 
                                 </div>

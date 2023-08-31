@@ -12,7 +12,7 @@
 }
 
 .TWC_modal{
-    position: absolute;
+    position: fixed;
     z-index: 11;
     left:50%;
     top:100px;

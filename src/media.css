@@ -120,4 +120,10 @@
   .content{
       border:0;
   }
+
+  .feature-content{
+    height: 100vh!important;
+    width: 100vw!important;
+  }
+
 }

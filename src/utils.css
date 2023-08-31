@@ -1,3 +1,12 @@
+.d-flex{
+    display: flex;
+}
+
+.j-center{
+    justify-content: center;
+}
+
+
 .dropdown{
     position: absolute;
     box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px;
@@ -5,12 +14,36 @@
     border-radius: 12px;
     background-color: rgba(255,255,255,1);
     min-width: 348px;
-    animation: dropdown 0.5s ease-in;
+    z-index: 10;
     overflow: hidden;
     transition: 0.2s height ease-in;
 }
 
-@keyframes dropdown {
+.ddtooltip{
+    position: fixed;
+    box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px;
+    max-width: calc(384px);
+    border-radius: 12px;
+    background-color: rgba(255,255,255,1);
+    min-width: 348px;
+    z-index: 10;
+    
+    transition: 0.2s height ease-in;
+}
+
+.ddtooltip .menu-inner{
+    padding:16px 0px;
+}
+
+.menu-inner{
+    overflow: hidden;
+}
+
+.ddslide{
+    animation: ddslide 0.5s ease-in;;
+}
+
+@keyframes ddslide {
     0%{
         max-height: 0%;
     }
@@ -19,6 +52,31 @@
     }
 }
 
+.ddfade{
+    animation: ddfade 0.2s ease-in;;
+}
+
+@keyframes ddfade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.ddarrow{
+position: absolute;
+bottom:-20px;
+left:50%;
+}
+.ddarrowsvg{
+    filter: drop-shadow(rgb(207, 217, 222) 1px -1px 1px);
+    width: 24px;
+    rotate: 180deg;
+    color:#ffffff;
+    fill:currentColor;
+}
 
 
 .menu-item{
@@ -27,6 +85,9 @@
     flex-direction: row;
     align-items: center;
     overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
 }
 
 .menu-item:hover{
@@ -48,4 +109,131 @@
     font-size: 15px;
     color: rgba(15,20,25,1.00);
     line-height: 20px;
+}
+
+
+
+
+.topbar-wrapper{
+    height: 63px;
+    width: 100%;
+
+}
+
+.topbar{
+    background-color:var(--twc-primary-color);
+color:#fff;
+position: fixed;
+display: flex;
+align-items: center;
+width:inherit;
+height: inherit;
+user-select: none;
+}
+
+.topbar-inner{
+font-weight: 700;
+line-height:20px;
+width: clamp(500px, 100%, 1100px);
+display: flex;
+margin:auto;
+justify-content: space-between;
+align-items: center;
+}
+
+.topbar-inner button.main{
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    border:0;
+    font-weight: 800;
+    color:rgb(255, 255, 255);
+    padding:7px 15px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.topbar-inner button.main:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.topbar-inner button.close{
+    background-color: transparent;
+    border-radius: 999px;
+    height: 40px;
+    width: 40px;
+    border:0;
+    cursor: pointer;
+}
+
+.topbar-inner button.close:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+
+.topbar-inner button.close svg{
+    color:#fff;
+    height: 25px;
+    width: 25px;
+    fill:currentColor
+}
+
+
+
+
+
+
+#featureCanvas{
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 20;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   
+   background:rgba(0,0,0,0.9);
+ 
+   
+
+}
+
+#featureCanvas .feature-content{
+   
+    position: relative;
+    width: inherit;
+    background-color: #fff;
+    box-shadow: 2px 0px 6px rgba(0,0,0,0.13);
+    padding:30px;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2), 0 0 4px rgba(0,0,0,0.222);
+}
+
+#featureCanvas .feature-content .feature-inner{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 90%;
+}
+
+#featureCanvas .canvas-button{
+   width: 130px;
+   height: 33px;
+    background-color: var(--twc-primary-color);
+    border-radius: 5px;
+    color:#fff;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+   bottom:0;
+   left:0;
+   background-origin: padding-box;
+   cursor: pointer;
+}
+
+#featureCanvas .canvas-button:hover{
+    background-color: rgb(5, 114, 186);
 }

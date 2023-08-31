@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createApi } from '@reduxjs/toolkit/query'
 import axios from "axios";
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -11,8 +12,8 @@ const initialState = {
 };
 
 
-export const fetchTweets = createAsyncThunk("/data/tweets.json", async () => {
-  const res = await axios.get('http://localhost:3000/data/tweets.json')
+export const fetchTweets = createAsyncThunk("", async () => {
+  const res = await fetch('http://localhost:3000/data/tweets.json')
     .catch((error) => console.log(error));
   return res;
 });
@@ -32,7 +33,7 @@ const tweetsSlice = createSlice({
       })
       .addCase(fetchTweets.fulfilled, (state, action) => {
         state.status = "success";
-        state.tweets = action.payload;
+        //state.tweets = action.payload;
       });
   },
 });

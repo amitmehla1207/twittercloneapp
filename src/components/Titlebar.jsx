@@ -2,6 +2,7 @@ import React from 'react'
 
 const Titlebar = () => {
   return (
+    <section id="titlebar">
     <div className="titlebar">
                         <span className="pagetitle">Home</span>
 
@@ -16,6 +17,7 @@ const Titlebar = () => {
                             </div>
                         </div>
                     </div>
+                    </section>
   )
 }
 

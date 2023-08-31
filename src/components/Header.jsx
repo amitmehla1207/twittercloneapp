@@ -1,25 +1,40 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Navlinks } from './Navlinks'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { togglePostModal } from '../redux/slices/globalSlice';
-import DropDownMenu from '../utils/DropDownMenu'
+import { toggleUserControlMenu } from '../redux/slices/globalSlice';
+import { UserControlMenu } from '../utils/UserControlMenu';
 
 const Header = () => {
 
     const dispatch = useDispatch();
+    const modal = useSelector((state)=> state.globalslice.postmodal);
+    
 
-    const [Ucms,setUcms] = useState(false);
-
-    const userControlModal = () =>{
-                setUcms(!Ucms);
+    function NewPostModal (){
+        if(modal){
+            document.body.style.overflow = 'hidden';
+            document.body.style.marginRight = '17px'
+        }else{
+            document.body.style.overflow = 'auto';
+            document.body.style.marginRight = '0'
+        }
     }
+
+    useEffect(()=>{
+        NewPostModal()
+    },[modal])
+
+    const userMenuButtonRef = useRef();
+    const usercontrolmenu = useSelector((state) => state.globalslice.userContolMenu)
 
   return (
     <div id="left">
+       
                 <div className="left-bar">
                     <div className="leftuppr">
                         <div className="logo">
-                            <h1>twitter clone</h1><span>by Amit</span>
+                            <h1>twitter clone</h1><a href="https://me.geekyamit.com">Amit Kumar</a>
                         </div>
 
             <Navlinks/>
@@ -45,13 +60,13 @@ const Header = () => {
 
 
                     <div className="leftbottom">
-                        {Ucms && <DropDownMenu arrow="bottom" animation="fadein"/>}
+                    {usercontrolmenu && <UserControlMenu/>}
                         <div className="user-conrol-wrapper">
-                            <div className="user-control" onClick={userControlModal}>
+                            <div className="user-control" onClick={()=>dispatch(toggleUserControlMenu())} ref={userMenuButtonRef}>
                                 <div className="user-meta">
                                     <div className="user-avatar-wrapper">
                                         <div className="user-avatar">
-
+                                        <img src={`../../img/${useSelector(state=>state.globalslice.avatar)}`} alt="avatar" className="avatarImg"></img>
                                         </div>
                                     </div>
                                     <div className="user-details">

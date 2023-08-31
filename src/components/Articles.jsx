@@ -1,25 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import ArticleFormat from './ArticleFormat'
-import { useDispatch, useSelector } from 'react-redux'
-import { loadTweets } from '../redux/slices/tweetsSlice'
-import { fetchTweets } from '../redux/slices/tweetsSlice'
-import axios from 'axios'
+
+import { useTweetContext } from '../context/tweetContext'
+import Loader from './Loader';
 
 
 const Articles = () => {
 
-  const tweets = useSelector(loadTweets);
-  const disptach = useDispatch();
 
-    useEffect(()=>{
-      disptach(fetchTweets());
-    },[])
+  const context = useTweetContext();
+
+  const loading = context.isLoading;
+
+
+  const mapper = context.tweets.map(elm=><ArticleFormat key={elm.id} payload={elm}/>)
   
   return (
     <div className="articles">
-        <ArticleFormat/>
+      
+       {loading ? <div className="d-flex j-center" style={{marginTop:"12px"}}><Loader/></div> : mapper}
         </div>
   )
 }
 
 export default Articles
+
